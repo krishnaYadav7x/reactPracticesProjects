@@ -1,0 +1,24 @@
+body{
+  background-color: #fbf1c7;
+}
+main{
+  border: 1px solid;
+  min-height: 500px;
+  padding: 1rem;
+}
+input{
+  width: 100%;
+}
+.clear-search,input{
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+.search-control{
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.suggestion-container{
+  border: 1px solid;
+  margin-top: 1rem;
+}
