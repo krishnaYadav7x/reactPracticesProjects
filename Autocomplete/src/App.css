@@ -13,12 +13,24 @@ input{
   font-size: 1rem;
   padding: 0.2rem;
 }
+.suggestion-btn{
+  padding: 0.2rem;
+  font-size: 1rem;
+  width: fit-content;
+}
 .search-control{
   display: flex;
   gap: 0.5rem;
   justify-content: center;
 }
 .suggestion-container{
-  border: 1px solid;
+  padding: 0.5rem;
+  
   margin-top: 1rem;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 400px;
+  overflow: hidden;
 }

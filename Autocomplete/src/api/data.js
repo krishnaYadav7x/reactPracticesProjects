@@ -1,5 +1,6 @@
-export  async function getData (){
-  const req = fetch("https://dummyjson.com/recipes?limit=500")
+export  async function getData ({query}){
+
+  const req = fetch(`https://dummyjson.com/recipes/search?q=${query}&limit=50`);
   const jsonData = await req
   
   return jsonData
