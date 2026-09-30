@@ -1,0 +1,15 @@
+.tablist-container{
+  border: 1px solid;
+  min-height: 600px;
+}
+
+.tab-container{
+  display: flex;
+  gap: 0.5rem;
+}
+.tab-btn{
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 4px;
+  cursor: pointer;
+}
