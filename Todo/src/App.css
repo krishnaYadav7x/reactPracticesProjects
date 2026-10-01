@@ -1,0 +1,57 @@
+body{
+  background-color: #A9C2BE;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  align-items: center;
+}
+input,button{
+  font-size: 1rem;
+  padding: 0.5rem;
+
+}
+input{
+  width: 100%;
+}
+.todos-container{
+  max-width: 700px;
+  width: 100%;
+  border: 1px solid green;
+  min-height: 800px;
+  padding: 1rem;
+}
+.input-container{
+  display: flex;
+  gap: 1rem;
+}
+.list-items{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-items span{
+  font-size: 1rem;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.edit-btn{
+  background-color: #C5D0B5;
+}
+.delete-btn{
+  background-color: #D8B5B5;
+}
+.edit-save-btn{
+  display: flex;
+}
+
+
+
+
+  
