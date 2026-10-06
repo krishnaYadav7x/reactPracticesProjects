@@ -1,8 +1,182 @@
-body{
-  background-color: #F7F5EF;
+* {
+  box-sizing: border-box;
 }
-.tablists button{
-  padding: 0.2rem;
-  font-size: 1rem;
-  margin: 0.2rem;
+
+body {
+  margin: 0;
+  background-color: #1b1b1b;
+  color: #e5e5e5;
+  font-family: Arial, sans-serif;
+}
+
+/* Main container */
+.tabForm-parent {
+  width: min(600px, 92%);
+  margin: 40px auto;
+}
+
+/* ---------------- Tabs ---------------- */
+
+.tablists {
+  display: flex;
+  gap: 8px;
+
+  padding: 10px;
+
+  background-color: #252525;
+  border: 1px solid #3d3d3d;
+  border-radius: 10px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.tablist-btn {
+  flex: 1;
+
+  padding: 10px 18px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #bdbdbd;
+  background-color: transparent;
+
+  border: none;
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.tablist-btn:hover {
+  color: #ffffff;
+  background-color: #333333;
+}
+
+
+/* ---------------- Form ---------------- */
+
+.tab-form {
+  margin-top: 16px;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  background-color: #242424;
+
+  border: 1px solid #3d3d3d;
+  border-radius: 10px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ---------------- Labels ---------------- */
+
+label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #d4d4d4;
+}
+
+
+/* ---------------- Inputs ---------------- */
+
+input {
+  margin-left: 16px;
+
+  padding: 9px 11px;
+
+  font-size: 15px;
+
+  color: #eeeeee;
+  background-color: #181818;
+
+  border: 1px solid #484848;
+  border-radius: 5px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+input::placeholder {
+  color: #777777;
+}
+
+input:focus {
+  border-color: #2dd4bf;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+}
+
+
+/* ---------------- About ---------------- */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 250px;
+
+  padding: 12px;
+
+  font-size: 15px;
+  font-family: inherit;
+
+  color: #eeeeee;
+  background-color: #181818;
+
+  border: 1px solid #484848;
+  border-radius: 6px;
+
+  outline: none;
+  resize: vertical;
+}
+
+textarea::placeholder {
+  color: #777777;
+}
+
+textarea:focus {
+  border-color: #2dd4bf;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+}
+
+
+/* ---------------- Submit ---------------- */
+
+.submit-btn {
+  width: 100%;
+
+  margin-top: 14px;
+  padding: 11px 20px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #071311;
+  background-color: #2dd4bf;
+
+  border: none;
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #5eead4;
+  box-shadow: 0 5px 18px rgba(45, 212, 191, 0.2);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
 }

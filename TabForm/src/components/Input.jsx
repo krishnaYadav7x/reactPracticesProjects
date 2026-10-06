@@ -14,6 +14,7 @@ export default function Input({
   return (
     <div>
       {labelPosition === "before" && <label htmlFor={id}>{label}</label>}
+
       <input
         id={id}
         type={type}

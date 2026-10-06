@@ -79,33 +79,41 @@ export default function TabForm() {
   const [formData, setFormData] = useState(
     {
       Profile: {
-        name: "krishna",
-        number: "456456",
-        email: "krishn@gmail.com",
-        password: "rt6",
+        name: "",
+        number: "",
+        email: "",
+        password: "",
       },
-      interestsData:['coding','running'],
-      theme:'dark'
+      interestsData:['',''],
+      theme:'',
+      about:''
     },
   ); 
+  console.log(formData);
   const [activeTabIndex, setActiveTabIndex] = useState(0)
 
   return (
     <div className="tabForm-parent">
       <Tablist setActiveTabIndex={setActiveTabIndex} />
-      {tabs.map((t, i) => {
-        return (
-          activeTabIndex === i && (
-            <t.Component
-              formData={formData}
-              key={t.id}
-              fields={fields}
-              interests={interests}
-              settings={settings}
-            />
-          )
-        )
-      })}
+      <div className="tab-form">
+        {tabs.map((t, i) => {
+          return (
+            activeTabIndex === i && (
+              <t.Component
+                formData={formData}
+                setFormData={setFormData}
+                key={t.id}
+                fields={fields}
+                interests={interests}
+                settings={settings}
+              />
+            )
+          );
+        })}
+        {activeTabIndex === tabs.length - 1 && (
+          <button className="submit-btn">Submit</button>
+        )}
+      </div>
     </div>
   );
 }

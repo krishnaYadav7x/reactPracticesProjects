@@ -6,10 +6,10 @@ export default function Tablist({ setActiveTabIndex }) {
     <div className="tablists">
       {tabs.map((t, i) => {
         return (
-          <button onClick={() => setActiveTabIndex(i)} key={t.id}>
+          <button className='tablist-btn' onClick={() => setActiveTabIndex(i)} key={t.id}>
             {t.label}
           </button>
-        );
+        )
       })}
     </div>
   );
