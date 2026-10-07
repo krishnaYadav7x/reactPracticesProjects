@@ -4,8 +4,8 @@
 
 body {
   margin: 0;
-  background-color: #1b1b1b;
-  color: #e5e5e5;
+  background-color: #262626;
+  color: #e8e8e8;
   font-family: Arial, sans-serif;
 }
 
@@ -23,11 +23,11 @@ body {
 
   padding: 10px;
 
-  background-color: #252525;
-  border: 1px solid #3d3d3d;
+  background-color: #303030;
+  border: 1px solid #4a4a4a;
   border-radius: 10px;
 
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
 }
 
 .tablist-btn {
@@ -38,7 +38,7 @@ body {
   font-size: 15px;
   font-weight: 500;
 
-  color: #bdbdbd;
+  color: #cfcfcf;
   background-color: transparent;
 
   border: none;
@@ -51,9 +51,8 @@ body {
 
 .tablist-btn:hover {
   color: #ffffff;
-  background-color: #333333;
+  background-color: #3d3d3d;
 }
-
 
 /* ---------------- Form ---------------- */
 
@@ -65,23 +64,21 @@ body {
   flex-direction: column;
   gap: 14px;
 
-  background-color: #242424;
+  background-color: #303030;
 
-  border: 1px solid #3d3d3d;
+  border: 1px solid #4a4a4a;
   border-radius: 10px;
 
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
-
 
 /* ---------------- Labels ---------------- */
 
 label {
   font-size: 15px;
   font-weight: 500;
-  color: #d4d4d4;
+  color: #dedede;
 }
-
 
 /* ---------------- Inputs ---------------- */
 
@@ -93,25 +90,25 @@ input {
   font-size: 15px;
 
   color: #eeeeee;
-  background-color: #181818;
+  background-color: #252525;
 
-  border: 1px solid #484848;
+  border: 1px solid #555555;
   border-radius: 5px;
 
   outline: none;
 
   transition: 0.2s ease;
+  margin-bottom: 1rem;
 }
 
 input::placeholder {
-  color: #777777;
+  color: #929292;
 }
 
 input:focus {
   border-color: #2dd4bf;
   box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
 }
-
 
 /* ---------------- About ---------------- */
 
@@ -131,9 +128,9 @@ textarea {
   font-family: inherit;
 
   color: #eeeeee;
-  background-color: #181818;
+  background-color: #252525;
 
-  border: 1px solid #484848;
+  border: 1px solid #555555;
   border-radius: 6px;
 
   outline: none;
@@ -141,14 +138,13 @@ textarea {
 }
 
 textarea::placeholder {
-  color: #777777;
+  color: #929292;
 }
 
 textarea:focus {
   border-color: #2dd4bf;
   box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
 }
-
 
 /* ---------------- Submit ---------------- */
 
@@ -179,4 +175,18 @@ textarea:focus {
 
 .submit-btn:active {
   transform: scale(0.98);
+}
+
+/* ---------------- Input Error ---------------- */
+
+.input-container {
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  top: 24px;
+
+  font-size: 12px;
+  color: #ff6b6b;
 }

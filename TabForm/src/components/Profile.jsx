@@ -9,19 +9,22 @@ export default function Profile({ fields, formData, setFormData }) {
   };
   return (
     <>
-      {fields.map((field) => {
+      {fields.map((field,i) => {
         return (
-          <Input
-            labelPosition="before"
-            key={field.id}
-            id={field.id}
-            type={field.type}
-            label={field.label}
-            name={field.name}
-            value={Profile[field.name]}
-            placeholder={field.placeholder}
-            onChange={(e) => handleChange(e, field.name)}
-          />
+          <div key={i} className="input-container">
+            <Input
+              labelPosition="before"
+              key={field.id}
+              id={field.id}
+              type={field.type}
+              label={field.label}
+              name={field.name}
+              value={Profile[field.name]}
+              placeholder={field.placeholder}
+              onChange={(e) => handleChange(e, field.name)}
+            />
+            {/* <p className="error">error</p> */}
+          </div>
         );
       })}
     </>
