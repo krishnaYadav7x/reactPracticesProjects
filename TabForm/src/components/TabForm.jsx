@@ -86,9 +86,7 @@ export default function TabForm() {
     theme: "",
     about: "",
   });
-  const handleSubmit = () => {
-    console.log(formData);
-  };
+
 
   const [errors, setErrors] = useState({});
   const validationConfig = {
@@ -113,24 +111,41 @@ export default function TabForm() {
             if (rule.required && !formData[el][e]) {
               errorsData[el][e] = rule.message;
             }
-          })
-        })
-      } else {
+          });
+        });
+      } 
+       else {
         validationConfig[el].forEach((rule) => {
           if (rule.required && !formData[el]) {
             errorsData[el] = rule.message;
           }
         });
       }
+      if (el === "interestsData") {
+        
+        validationConfig[el].forEach((rule) => {
+          
+          // console.log(formData[el].length, rule.minLength);
+          if (formData[el].length < rule.minLength) {
+            errorsData[el] = rule.message;
+          }
+        });
+      }
     });
+    setErrors(errorsData)
     return errorsData;
   };
-
+  const handleSubmit = () => {
+     const errorsData = validate()
+     console.log(errorsData)
+    //  const errorsArray = Object.keys(errorsData);
+    //  console.log(errorsArray);
+  };
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   return (
     <div className="tabForm-parent">
-      <Tablist validate={validate} setActiveTabIndex={setActiveTabIndex} />
+      <Tablist validate={validate} setActiveTabIndex={setActiveTabIndex} activeTabIndex={activeTabIndex}/>
       <div className="tab-form">
         {tabs.map((t, i) => {
           return (
