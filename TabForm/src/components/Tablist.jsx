@@ -1,7 +1,7 @@
 import { tabs } from "../constants";
 
 export default function Tablist({ setActiveTabIndex, validate ,activeTabIndex}) {
-let currentTabIndex = activeTabIndex
+const currentTabIndex = activeTabIndex
 
   const tabErrorMap = {
     Profile: "Profile",
