@@ -3,7 +3,7 @@ import Button from '../components/Button'
 import Text from '../components/Text'
 import './style.css'
 export default function QuestionController({
-  questions,
+  questionsData,
   activeIndex,
   handlePrev,
   handleNext,
@@ -11,12 +11,12 @@ export default function QuestionController({
   return (
     <div className="question-controller">
       <Button label="←" disabled={activeIndex === 0} onClick={handlePrev} />
-      {questions.map((question, i) => {
+      {questionsData.map((question, i) => {
         return i === activeIndex && <Text key={i} label={question.question} />;
       })}
       <Button
         label="→"
-        disabled={activeIndex === questions.length - 1}
+        disabled={activeIndex === questionsData.length - 1}
         onClick={handleNext}
       />
     </div>

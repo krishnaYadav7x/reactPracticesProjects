@@ -1,15 +1,16 @@
 
 import Button from '../components/Button'
 import './style.css'
-export default function Keyboard({keyboardLetterLength ,handleKeyboard=()=>{}}) {
-  function handleClick(i){
-    return ()=>{
-      handleKeyboard(String.fromCharCode(65 + i));
-    }
+export default function Keyboard({ keyboardLetterLength, setClickedKey, keyboardHandle }) {
+  function handleClick(i) {
+    return () => {
+      // setClickedKey(String.fromCharCode(65 + i));
+      keyboardHandle(String.fromCharCode(65 + i));
+    };
   }
-  return <div>
-    {
-      keyboardLetterLength.map((_,i)=>{
+  return (
+    <div>
+      {keyboardLetterLength.map((_, i) => {
         return (
           <Button
             onClick={handleClick(i)}
@@ -17,7 +18,7 @@ export default function Keyboard({keyboardLetterLength ,handleKeyboard=()=>{}}) 
             label={String.fromCharCode(65 + i)}
           />
         );
-      })
-    }
-  </div>
+      })}
+    </div>
+  );
 }

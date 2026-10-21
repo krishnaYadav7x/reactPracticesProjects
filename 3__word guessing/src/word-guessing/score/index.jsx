@@ -1,12 +1,12 @@
 import React from 'react'
 import Tag from '../components/Tag'
 import Text from '../components/Text'
-
-export default function Score({score='0'}) {
+import './style.css'
+export default function Score({score}) {
   return (
-    <div>
+    <div className='score'>
       <Tag label={'score'}/>
-      <Text score={score}/>
+      <Text label={score}/>
     </div>
   )
 }
